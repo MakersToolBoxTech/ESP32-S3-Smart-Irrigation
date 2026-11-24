@@ -1,5 +1,9 @@
 # 🌱 ESP32-S3 Smart Irrigation System
 
+## 📸 Smart Irrigation Circuit
+
+![ESP32-S3 Smart Irrigation Circuit](Screenshot%202569-11-24%20073644.png)
+
 ### Automatic Watering System | Maker's Tool Box
 
 🇹🇭 **ระบบจำลองการรดน้ำต้นไม้อัตโนมัติด้วย ESP32-S3**
