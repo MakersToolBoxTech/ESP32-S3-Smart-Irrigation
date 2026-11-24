@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "author": "Microduck / Maker's Tool Box | Smart Farm Auto Demo",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 80,
+      "left": 50,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "pumpRelay",
+      "top": 0,
+      "left": 390,
+      "attrs": {
+        "transistor": "npn"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "pumpLed",
+      "top": 215,
+      "left": 500,
+      "attrs": {
+        "color": "green",
+        "label": "WATER PUMP ON"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 235,
+      "left": 365,
+      "rotate": 90,
+      "attrs": {
+        "value": "330"
+      }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -205,
+      "left": 0,
+      "attrs": {
+        "pins": "i2c",
+        "i2cAddress": "0x27",
+        "background": "blue",
+        "color": "white"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "mode",
+      "top": -270,
+      "left": 0,
+      "attrs": {
+        "text": "MICRODUCK SMART FARM / VIRTUAL SENSOR AUTO DEMO (5s)"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "help",
+      "top": 335,
+      "left": 20,
+      "attrs": {
+        "text": "AUTO: every 5s soil changes 10%  |  DRY <35%: PUMP ON  |  WET >55%: PUMP OFF"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:5V",
+      "pumpRelay:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.2",
+      "pumpRelay:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:5",
+      "pumpRelay:IN",
+      "orange",
+      []
+    ],
+    [
+      "esp:6",
+      "r1:1",
+      "green",
+      []
+    ],
+    [
+      "r1:2",
+      "pumpLed:A",
+      "green",
+      []
+    ],
+    [
+      "pumpLed:C",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "esp:8",
+      "lcd:SDA",
+      "blue",
+      []
+    ],
+    [
+      "esp:9",
+      "lcd:SCL",
+      "yellow",
+      []
+    ],
+    [
+      "esp:5V",
+      "lcd:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "lcd:GND",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
