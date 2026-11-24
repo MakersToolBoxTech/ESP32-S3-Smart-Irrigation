@@ -3,7 +3,11 @@
 ## 📸 Smart Irrigation Circuit
 
 ![ESP32-S3 Smart Irrigation Circuit](Screenshot%202569-11-24%20073644.png)
+## 🎬 Video Demonstration
 
+Watch the ESP32-S3 Smart Irrigation demonstration on Maker's Tool Box.
+
+[▶ Watch on YouTube](https://youtu.be/gok_ZcEOhMc)
 ### Automatic Watering System | Maker's Tool Box
 
 🇹🇭 **ระบบจำลองการรดน้ำต้นไม้อัตโนมัติด้วย ESP32-S3**
